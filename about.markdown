@@ -8,6 +8,8 @@ permalink: /about/
 ### About me
 I've been involved in software developent and operations for the last 15 years.
 
+![Paul Greeff](images/IMG-20210416-WA0044.jpg)
+
 ### A brief history of Paul
 
 #### Academic background

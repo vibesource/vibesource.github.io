@@ -5,6 +5,8 @@ date:   2022-06-25 18:26:16 +0200
 categories: resources update
 ---
 
+### Technologies
+
 [Django REST Framework docs](https://www.django-rest-framework.org/) Django REST framework is a powerful and flexible toolkit for building Web APIs.
 
 [Swagger](https://django-rest-swagger.readthedocs.io/en/latest/) Swagger/OpenAPI Documentation Generator for Django REST Framework.
@@ -16,4 +18,8 @@ categories: resources update
 [API Bakery](https://apibakery.com/) Build APIs in seconds.
 
 [Celery](https://docs.celeryq.dev/en/stable/) Distributed Task Queue
+
+### Resources
+
+[Stackoverflow](https://stackoverflow.com/) Stack Overflow helps people find the answers they need, when they need them. 
 

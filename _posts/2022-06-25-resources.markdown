@@ -18,6 +18,7 @@ categories: resources update
 [API Bakery](https://apibakery.com/) Build APIs in seconds.
 
 [Celery](https://docs.celeryq.dev/en/stable/) Distributed Task Queue
+
 [Terraform](https://www.terraform.io/) Terraform codifies cloud APIs into declarative configuration files.
 
 

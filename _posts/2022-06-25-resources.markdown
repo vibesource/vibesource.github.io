@@ -15,18 +15,24 @@ categories: resources update
 
 [Kubernetes](https://kubernetes.io/) Production-Grade Container Orchestration.
 
-[Docker](https://www.docker.com/).
+[Docker](https://www.docker.com/) Containers.
 
 [API Bakery](https://apibakery.com/) Build APIs in seconds.
 
-[Celery](https://docs.celeryq.dev/en/stable/) Distributed Task Queue
+[Celery](https://docs.celeryq.dev/en/stable/) Distributed Task Queue.
 
 [Terraform](https://www.terraform.io/) Terraform codifies cloud APIs into declarative configuration files.
 
-[Flutter](https://flutte) Build apps for any screen
+[Flutter](https://flutte) Build apps for any screen.
 
 
 ### Resources
 
 [Stackoverflow](https://stackoverflow.com/) Stack Overflow helps people find the answers they need, when they need them. 
+
+### Useful browser extensions
+
+[Web developer](https://chrispederick.com/work/web-developer/) The Web Developer extension adds various web developer tools to a browser. 
+
+[JSON View](https://chrome.google.com/webstore/detail/jsonvue/chklaanhfefbnpoihckbnefhakgolnmc) Validate and view JSON documents.
 

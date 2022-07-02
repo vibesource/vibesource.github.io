@@ -9,6 +9,8 @@ categories: resources update
 
 [Django REST Framework docs](https://www.django-rest-framework.org/) Django REST framework is a powerful and flexible toolkit for building Web APIs.
 
+[Django Project](djangoproject.com)Django makes it easier to build better web apps more quickly and with less code.
+
 [Swagger](https://django-rest-swagger.readthedocs.io/en/latest/) Swagger/OpenAPI Documentation Generator for Django REST Framework.
 
 [Kubernetes](https://kubernetes.io/) Production-Grade Container Orchestration.

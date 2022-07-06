@@ -26,6 +26,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 minima:
+  # https://github.com/jekyll/minima/blob/master/_config.yml
   # generate social links in footer
   social_links:
   #twitter_username: jekyllrb

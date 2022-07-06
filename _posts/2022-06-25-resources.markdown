@@ -40,5 +40,9 @@ categories: resources update
 
 [CSS Cheat sheet](http://www.lesliefranke.com/files/reference/csscheatsheet.html) Leslie Franke CSS Cheat Sheet.
 
+[Python cheat sheet](https://www.pythoncheatsheet.org/) This cheat sheet tries to provide a basic reference for beginner and advanced developers, lower the entry barrier for newcomers and help veterans refresh the old tricks.
+
+[Python style guide](https://cheatography.com/jmds/cheat-sheets/python-pep8-style-guide/) Python PEP8 style guide Cheat Sheet
+
 
 

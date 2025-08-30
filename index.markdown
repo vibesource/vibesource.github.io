@@ -10,3 +10,4 @@ I don't like saying 'This site is still under construction' as that has become a
 
 For the moment it hosts a number of useful links in the resources section and a small page about me. I commit daily to private projects on Github so it makes more sense to host it here.
 
+

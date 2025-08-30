@@ -18,8 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Paul Greeff 
-email: pgreeff@gmail.com
+title: VibeSource
+email: neondrift@duck.com
 description: >- # this means to ignore newlines until "baseurl:"
   Tech musings of the chief propellerhead.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -37,8 +37,8 @@ minima:
   # generate social links in footer
   social_links:
   #twitter_username: jekyllrb
-    github_username:  paulgreeff
-    linkedin: paul-greeff-33257194
+    github_username:  vibesource
+
 
 #theme: jekyll-theme-midnight
 plugins:

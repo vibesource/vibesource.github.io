@@ -9,5 +9,5 @@ VibeSource is a **public site** even when changes are on an unmerged branch or d
 - Credit upstream projects and contributors.
 - Work on a branch; run the Astro build; open a PR; leave merge and deployment to the owner.
 - Do not modify private repository visibility, or link to a private repository from a public project page.
-- The existing data sources are `src/data/projects.ts` and `src/data/notes.ts`. Project `href` is optional; the note `project` field is metadata, not a functional timeline.
+- Project profiles live as Markdown files in `src/content/projects/` and field notes in `src/content/notes/`. Use the schema in `src/content.config.ts`, preserve file slugs/URLs, and do not create links to private source. Project `href` is optional; note `project` remains metadata only, not a functional timeline. Do not edit removed TypeScript arrays.
 - Preserve the workshop voice: curious, precise, candid about unfinished work and decisions to stop.

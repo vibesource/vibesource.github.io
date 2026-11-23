@@ -61,10 +61,11 @@ An agent can suggest updates to this journal as part of a normal development han
 
 ## Public site content model (current implementation)
 
-The website is an Astro static site. Its content is presently maintained in TypeScript, **not** Markdown content collections:
+The website is an Astro static site with schema-validated **Markdown content collections** (no MDX integration currently):
 
-- `src/data/projects.ts`: list of projects, including `slug`, `name`, `eyebrow`, `summary`, `detail`, `area`, `status`, optional `href`, and `accent`. A missing `href` intentionally means **no public code link**.
-- `src/data/notes.ts`: notes with `slug`, `date`, `category`, `title`, `excerpt`, `body` (array of paragraphs) and optional `project`. The `project` property is metadata only as of this version; no automatic cross-linking or project timeline is implemented.
+- `src/content/projects/<slug>.md`: one file per project. Required frontmatter: `name`, `eyebrow`, `summary`, `area`, `status`, `accent`, `order` (gallery order). Optional `href` points only to approved public source; a missing `href` intentionally means **no public code link**. Markdown body replaces the old `detail` field.
+- `src/content/notes/<slug>.md`: one file per note. Required frontmatter: `date` (quoted `YYYY-MM-DD` string), `category`, `title`, `excerpt`. Optional `project` is metadata only: no automatic cross-linking or timeline exists.
+- `src/content.config.ts`: Astro glob loader collection definitions and schemas, which validate metadata during builds. Filename is the existing route slug; preserve it when migrating or editing published pages.
 - `src/pages/projects/[slug].astro` and `src/pages/notes/[slug].astro`: generated pages.
 - `docs/publishing-evidence.md`: safety guidance for evidence, synthetic media examples, PC Prepper and private source material.
 
@@ -77,7 +78,7 @@ Don't promise embedded video galleries, automated GitHub sync, project timelines
 3. **Draft locally, not publicly.** Prepare public-safe text or a patch in the project repository/private workspace first. No private data should enter a public VibeSource branch, issue, commit or PR.
 4. **Privacy and provenance review.** Remove personal details, children’s images and identities, secrets, tokens, internal hostnames/IPs, credentials, unapproved logs, licensed or third-party material lacking permission, and private repository links. Credit original authors and upstream projects. Avoid presenting upstream features as original work.
 5. **Obtain explicit approval** to submit specific proposed website content. Then, and only then, create a website branch and PR. Do not merge or publish without the owner's further approval.
-6. **Validate** using `npm install` and `npm run build` (or the repo's current CI), check rendered text and links, then identify what is fact, hypothesis or planned work in the PR summary.
+6. **Validate** using `npm install` and `npm run build` (or the repo's current CI), check rendered text and links, then identify what is fact, hypothesis or planned work in the PR summary. Treat Markdown text and frontmatter alike as public material.
 
 Never change a private repository's visibility to satisfy a website task. Never trigger automatic publication from project commits or unreviewed AI summaries.
 

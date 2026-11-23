@@ -1,7 +1,35 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { projects } from '../../data/projects';
-export function getStaticPaths() {return projects.map(project=>({params:{slug:project.slug},props:{project}}));}
-const {project} = Astro.props;
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map(project => ({ params: { slug: project.id }, props: { project } }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+const data = project.data;
 ---
-<Base title={project.name} description={project.summary}><section class="page-intro container"><p class="eyebrow muted"><a href="/projects/">← PROJECTS</a> / {project.eyebrow}</p><h1>{project.name}<span class="dot">.</span></h1><p>{project.summary}</p></section><section class="container detail-body"><div class="detail-panel"><span class="eyebrow muted">ON THE WORKBENCH</span><h2>What is it?</h2><p>{project.detail}</p><p>This is a working project, not a polished case study. Notes and updates will be added as the experiment develops.</p>{project.href && <a class="button button-primary" href={project.href} target="_blank" rel="noopener noreferrer">Explore public repository ↗</a>}</div><aside class="detail-aside"><span class="mini-label">STATUS</span><p>{project.status}</p><span class="mini-label">AREA</span><p>{project.area}</p><span class="mini-label">SOURCE CODE</span><p>{project.href ? <a href={project.href} target="_blank" rel="noopener noreferrer">Public repository ↗</a> : "Private during development"}</p></aside></section></Base>
+<Base title={data.name} description={data.summary}>
+  <section class="page-intro container">
+    <p class="eyebrow muted"><a href="/projects/">← PROJECTS</a> / {data.eyebrow}</p>
+    <h1>{data.name}<span class="dot">.</span></h1>
+    <p>{data.summary}</p>
+  </section>
+  <section class="container detail-body">
+    <div class="detail-panel">
+      <span class="eyebrow muted">ON THE WORKBENCH</span>
+      <h2>What is it?</h2>
+      <Content />
+      <p>This is a working project, not a polished case study. Notes and updates will be added as the experiment develops.</p>
+      {data.href && <a class="button button-primary" href={data.href} target="_blank" rel="noopener noreferrer">Explore public repository ↗</a>}
+    </div>
+    <aside class="detail-aside">
+      <span class="mini-label">STATUS</span><p>{data.status}</p>
+      <span class="mini-label">AREA</span><p>{data.area}</p>
+      <span class="mini-label">SOURCE CODE</span>
+      <p>{data.href ? <a href={data.href} target="_blank" rel="noopener noreferrer">Public repository ↗</a> : "Private during development"}</p>
+    </aside>
+  </section>
+</Base>

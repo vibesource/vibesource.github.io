@@ -1,7 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
-import { projects } from '../data/projects';
-import { notes } from '../data/notes';
+import { getCollection } from 'astro:content';
+const projects = (await getCollection('projects')).sort((a,b) => a.data.order - b.data.order);
+const notes = (await getCollection('notes')).sort((a,b) => b.data.date.localeCompare(a.data.date) || a.id.localeCompare(b.id));
 const featured = projects.slice(0,4);
 ---
 <Base>
@@ -18,9 +19,9 @@ const featured = projects.slice(0,4);
   <section class="section container" id="projects">
     <div class="section-heading"><div><p class="eyebrow muted">ON THE WORKBENCH / 001</p><h2>Things taking shape<span class="dot">.</span></h2><p>Some useful. Some experimental. All still teaching me something.</p></div><a class="text-link" href="/projects/">All projects <span>↗</span></a></div>
     <div class="project-grid">
-      {featured.map((project, i) => <a href={`/projects/${project.slug}/`} class:list={['project-card', `accent-${project.accent}`]}><div class="project-top"><span class="mini-label">{String(i+1).padStart(2,'0')} / {project.eyebrow}</span><span class="arrow">↗</span></div><div class="project-glyph" aria-hidden="true">{['⌁','✳','⎔','◈'][i]}</div><div class="project-bottom"><span class="project-status"><span class="status-dot"></span>{project.status}</span><h3>{project.name}</h3><p>{project.summary}</p></div></a>)}
+      {featured.map((project, i) => <a href={`/projects/${project.id}/`} class:list={['project-card', `accent-${project.data.accent}`]}><div class="project-top"><span class="mini-label">{String(i+1).padStart(2,'0')} / {project.data.eyebrow}</span><span class="arrow">↗</span></div><div class="project-glyph" aria-hidden="true">{['⌁','✳','⎔','◈'][i]}</div><div class="project-bottom"><span class="project-status"><span class="status-dot"></span>{project.data.status}</span><h3>{project.data.name}</h3><p>{project.data.summary}</p></div></a>)}
     </div>
   </section>
-  <section class="note-section"><div class="container note-layout"><div><p class="eyebrow muted">FROM THE NOTEBOOK / 002</p><h2>Notes from<br/>the <em>bench.</em></h2><p class="note-intro">Not polished research papers. Just decisions, discoveries, detours, and the occasional working answer.</p><a class="text-link" href="/notes/">Browse field notes ↗</a></div><div class="note-list">{notes.map(note => <a class="note-row" href={`/notes/${note.slug}/`}><div class="note-meta"><span>{note.date}</span><span>{note.category}</span></div><h3>{note.title} <span>↗</span></h3><p>{note.excerpt}</p></a>)}<p class="note-placeholder">More notes will appear here as the workshop grows.</p></div></div></section>
+  <section class="note-section"><div class="container note-layout"><div><p class="eyebrow muted">FROM THE NOTEBOOK / 002</p><h2>Notes from<br/>the <em>bench.</em></h2><p class="note-intro">Not polished research papers. Just decisions, discoveries, detours, and the occasional working answer.</p><a class="text-link" href="/notes/">Browse field notes ↗</a></div><div class="note-list">{notes.map(note => <a class="note-row" href={`/notes/${note.id}/`}><div class="note-meta"><span>{note.data.date}</span><span>{note.data.category}</span></div><h3>{note.data.title} <span>↗</span></h3><p>{note.data.excerpt}</p></a>)}<p class="note-placeholder">More notes will appear here as the workshop grows.</p></div></div></section>
   <section class="manifesto container"><span class="eyebrow muted">A WORKSHOP, NOT A SHOWROOM</span><h2>Not everything needs<br/>to be <em>finished</em> to be worth sharing.</h2><a class="text-link" href="/about/">A little more about this place ↗</a></section>
 </Base>

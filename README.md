@@ -17,11 +17,11 @@ Visit http://localhost:4321. Run `npm run build` to generate the static site in 
 
 ## Add a project
 
-Add a new entry in `src/data/projects.ts`. The project gallery and detail page are generated from the same source.
+Create one Markdown file per project under `src/content/projects/`, with required frontmatter matching `src/content.config.ts`. The filename becomes the stable project slug and URL (`/projects/<slug>/`). Use an integer `order` to control gallery position. `href` is optional and must be omitted for private repositories. Markdown body text appears on the detail page.
 
 ## Add a field note
 
-Add an entry in `src/data/notes.ts`. Each note automatically gets a page and appears in the field notes listing. This deliberately simple structure is the starting point; Markdown-based collections can replace it when the publishing workflow is established.
+Create one Markdown file per field note under `src/content/notes/`. Add `date` (quoted `YYYY-MM-DD`), `category`, `title` and `excerpt` frontmatter, followed by the note body. The filename becomes the slug and URL (`/notes/<slug>/`). An optional `project` field records a related project slug but does not yet create automatic cross-links. Notes appear newest first.
 
 ## Deployment
 

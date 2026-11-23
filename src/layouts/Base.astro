@@ -1,0 +1,37 @@
+---
+import '../styles/global.css';
+const { title = 'VibeSource', description = 'Built from curiosity. An independent workshop for software, AI, connected systems and experiments.' } = Astro.props;
+const path = Astro.url.pathname;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0a1013" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={Astro.url.href} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title === 'VibeSource' ? 'VibeSource | Built from curiosity' : `${title} | VibeSource`}</title>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header container">
+        <a class="brand" href="/" aria-label="VibeSource home"><span class="brand-mark" aria-hidden="true">v<span>.</span></span><span>VIBESOURCE</span></a>
+        <nav aria-label="Main navigation">
+          <a class:list={['nav-link', {active: path === '/'}]} href="/">Workshop</a>
+          <a class:list={['nav-link', {active: path.startsWith('/projects')}]} href="/projects/">Projects</a>
+          <a class:list={['nav-link', {active: path.startsWith('/notes')}]} href="/notes/">Field notes</a>
+          <a class:list={['nav-link', {active: path.startsWith('/about')}]} href="/about/">About</a>
+        </nav>
+        <a class="header-github" href="https://github.com/vibesource" target="_blank" rel="noopener noreferrer" aria-label="VibeSource on GitHub">GitHub ↗</a>
+      </header>
+      <main id="main"><slot /></main>
+      <footer class="footer container">
+        <div><span class="footer-brand">VIBESOURCE<span class="dot">.</span></span><p>Built from curiosity. Made in the workshop.</p></div>
+        <div class="footer-links"><a href="/projects/">Projects</a><a href="/notes/">Field notes</a><a href="https://github.com/vibesource">GitHub ↗</a></div>
+        <span class="footer-small">© {new Date().getFullYear()} VibeSource</span>
+      </footer>
+    </div>
+  </body>
+</html>

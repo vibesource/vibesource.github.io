@@ -1,0 +1,5 @@
+---
+import Base from '../../layouts/Base.astro';
+import {notes} from '../../data/notes';
+---
+<Base title="Field notes"><section class="page-intro container"><p class="eyebrow muted">THE NOTEBOOK / WORK IN PROGRESS</p><h1>Field notes<span class="dot">.</span></h1><p>Short updates from the workshop. What I tried, what changed, and what I learned along the way.</p></section><section class="container section compact"><div class="note-list notes-full">{notes.map(note=><a class="note-row" href={`/notes/${note.slug}/`}><div class="note-meta"><span>{note.date}</span><span>{note.category}</span></div><h3>{note.title} <span>↗</span></h3><p>{note.excerpt}</p></a>)}</div></section></Base>

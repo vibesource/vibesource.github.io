@@ -28,3 +28,7 @@ Add an entry in `src/data/notes.ts`. Each note automatically gets a page and app
 The workflow in `.github/workflows/deploy.yml` deploys `master` to GitHub Pages using GitHub Actions after merge. In the repository Pages settings, select **GitHub Actions** as the source before enabling the workflow.
 
 The legacy Jekyll files remain in Git history for reference.
+
+## Agent-assisted workshop tracking
+
+Start with [the workshop integration guide](docs/WORKSHOP_GUIDE.md) for project lifecycle, local journaling, public-site workflow, privacy and attribution. For another repository, use the [optional AGENTS.md snippet](docs/AGENTS_SNIPPET.md) only after opting into workshop tracking. Website-specific agents must also read [AGENTS.md](AGENTS.md). Nothing from private projects is auto-published.

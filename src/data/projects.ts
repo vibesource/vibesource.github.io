@@ -6,11 +6,41 @@ export type Project = {
   detail: string;
   area: string;
   status: 'Exploring' | 'In development' | 'Public repository';
-  href: string;
+  href?: string;
   accent: string;
 };
 
 export const projects: Project[] = [
+  {
+    slug: 'pc-prepper',
+    name: 'PC Prepper',
+    eyebrow: 'LOCAL-FIRST / RESILIENCE',
+    summary: 'What does a genuinely useful offline-first AI workstation look like?',
+    detail: 'An ongoing exploration of local inference, useful tools, knowledge access and recovery when the internet is unavailable. The work currently lives within a private homelab deployment repository; this page follows the ideas rather than exposing operational configuration.',
+    area: 'Local-first computing',
+    status: 'In development',
+    accent: 'lime',
+  },
+  {
+    slug: 'kidtube',
+    name: 'KidTube',
+    eyebrow: 'VIDEO / LOCAL AI',
+    summary: 'A family video editing experiment with local processing and human-reviewed publishing.',
+    detail: 'A browser-based video workflow exploring local transcription, sampled-frame review, suggested edits and parental approval. Experimental automated visual cut marking is under test; detection accuracy and safety are not yet established. Public examples will use fictional or synthetic media only.',
+    area: 'Software and tools',
+    status: 'In development',
+    accent: 'rose',
+  },
+  {
+    slug: 'local-agent-workflow',
+    name: 'Local Agent Development Workflow',
+    eyebrow: 'AI / DEVELOPMENT METHODS',
+    summary: 'Can local coding agents complete bounded engineering tasks reliably, with human acceptance gates?',
+    detail: 'A model-agnostic investigation into planning, handovers, verification, checkpoints and acceptance for local AI-assisted software development. Versioned methods and case studies are being refined privately before publication.',
+    area: 'Artificial intelligence',
+    status: 'Exploring',
+    accent: 'lavender',
+  },
   {
     slug: 'meshpulse',
     name: 'MeshPulse',

@@ -1,0 +1,5 @@
+---
+import Base from '../../layouts/Base.astro';
+import { projects } from '../../data/projects';
+---
+<Base title="Projects"><section class="page-intro container"><p class="eyebrow muted">THE WORKBENCH / PROJECT INDEX</p><h1>Projects<span class="dot">.</span></h1><p>Things I've built, things I'm building, and a few rabbit holes worth remembering.</p></section><section class="container section compact"><div class="project-grid">{projects.map((project,i)=><a href={`/projects/${project.slug}/`} class:list={['project-card',`accent-${project.accent}`]}><div class="project-top"><span class="mini-label">{String(i+1).padStart(2,'0')} / {project.eyebrow}</span><span class="arrow">↗</span></div><div class="project-glyph" aria-hidden="true">⌁</div><div class="project-bottom"><span class="project-status"><span class="status-dot"></span>{project.status}</span><h3>{project.name}</h3><p>{project.summary}</p></div></a>)}</div></section></Base>

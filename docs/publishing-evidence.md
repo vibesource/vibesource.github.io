@@ -28,7 +28,7 @@ A simple note can be: *“Tested an invented on-screen overlay at 00:22–00:27.
 
 ## PC Prepper boundaries
 
-The implementation currently lives with private homelab deployment material. Public notes should discuss architecture, verified experiments and trade-offs, not internal addresses, service tokens, access policies or personal network topology. Creating a standalone repository is optional and should follow a separate sanitised-content review.
+PC Prepper now has a **separate private documentation/reproduction-guide repository**, with original operational evidence and deployment configuration retained in the private homelab repository. Neither private repository is automatically publication-ready. Public notes may discuss carefully reviewed architecture, dated experiments, the owner's explicitly approved experience and trade-offs, but not private repository links, internal addresses, service tokens, access policies, personal paths or network topology. Any future public release of the guide itself requires review of its full content and Git history.
 
 ## Public vs private project pages
 

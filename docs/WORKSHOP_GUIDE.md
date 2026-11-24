@@ -20,6 +20,16 @@ These are defaults for reflection, **not hard rules**. Sometimes building a fami
 
 **Agents must never assume that access to a private repository authorises publishing its contents.** Even draft pull requests, branch names, build logs and screenshots in the website repository can become publicly visible.
 
+## Conversations as editorial and direction checkpoints
+
+VibeSource is a **human-led reflection**, not a website automatically assembled from agent reports. Implementation repositories capture what was attempted and what evidence exists. The owner may return to this workshop (including a ChatGPT project conversation) to discuss what worked, what felt frustrating, what changed their mind and whether the project is still solving its original problem. The conversation may uncover valuable context absent from commit histories.
+
+Reflection is optional and useful in its own right: it may reveal goal drift, prompt an owner-approved update to the **owning project's** priorities, inspire a field note, or lead to no publication at all. Neither Codex nor ChatGPT should change a project's goals without owner approval.
+
+Agents may recover evidence, suggest topics and draft first versions, but must preserve the distinction between tested results, operator experience and conjecture. The owner's perspective and editorial review determine the final story. There is no mandatory cadence, automatic publication, or per-commit story requirement.
+
+Conversation history is not a guaranteed durable handover to future sessions. Keep enduring technical decisions and evidence in project repositories, and track private editorial candidates before approval. Only specifically approved, sanitised material may enter a public website branch or PR; merging remains a separate owner decision.
+
 ## When to capture something
 
 At project inception: propose a concise public-facing project description, and create a local `docs/workshop/` journal **only if the owner opts in**. Do not delay starting the actual project for website work.

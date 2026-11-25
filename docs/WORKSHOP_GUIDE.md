@@ -8,7 +8,7 @@ Publication requires explicit owner approval.
 
 ## A guiding principle, not a policy test
 
-Explore a question worth asking. **Build** where there is something new to learn or a problem left unsolved. **Reuse** where a good solution already exists. **Contribute** where an existing project can be improved. **Set aside** an experiment when ongoing maintenance costs more than it provides or teaches.
+Explore a question worth asking. **Build** where there is something new to learn or a problem left unsolved. **Reuse** where a good solution already exists. **Contribute** where an existing project can be improved. **Nurture** something that has proved useful: maintain it, smooth rough edges, document it and, where appropriate, make it available to others. **Set aside** an experiment when ongoing maintenance costs more than it provides or teaches.
 
 These are defaults for reflection, **not hard rules**. Sometimes building a familiar thing is a worthwhile learning exercise; sometimes an unfinished experiment is worth continuing just because it is interesting. Explain the choice rather than forcing a justification.
 
@@ -106,9 +106,22 @@ Short notes are fine. Skip vague progress updates such as "refactored code" unle
 
 ## Project lifecycle and status
 
-The current UI supports only three status strings: `Exploring`, `In development` and `Public repository`. The last is a legacy presentation label, not a meaningful lifecycle classification. **Do not infer current status from commit age.**
+Statuses describe a project's present relationship to its purpose, not the volume or recency of commits. **Do not infer current status from commit age.** They are descriptive labels, not mandatory gates or a prescribed sequence:
 
-If a project pauses, is abandoned, or reaches release, record its true disposition in the project journal first. Propose a separate website schema/UI improvement before using new values such as `Paused`, `Archived` or `Available`. An archived project should remain discoverable with an explanation, not silently vanish.
+| Status | Meaning | Website schema |
+| --- | --- | --- |
+| `Exploring` | Testing an idea, investigating feasibility or discovering what is worth building. | Supported |
+| `In development` | Actively building or substantially changing functionality. | Supported |
+| `Nurturing` | Already useful, with maintenance, refinements and occasional improvements driven by real use. | Supported |
+| `Available` | Released or usable by others; no promise of ongoing feature development. | Proposed |
+| `Paused` | Intentionally suspended, with the possibility of returning. | Proposed |
+| `Archived` | No longer maintained, preserved with an explanation for reference. | Proposed |
+
+A project can move between stages when its circumstances change. For example, a nurtured project may return to active development for a significant new feature. These definitions should support thoughtful decisions, not restrict curiosity.
+
+**Source-code visibility is separate from lifecycle.** `Public repository` is a legacy website status, not a lifecycle classification; the current schema retains it for existing profiles until those profiles can be updated. Use the optional project `href` for approved public source links; don't change private repository visibility to fit a label.
+
+When a project pauses, reaches release or becomes archived, record its true disposition in its own journal and explain it in the public profile where appropriate. Add proposed statuses to the schema/UI only when needed. An archived project should remain discoverable rather than silently vanish.
 
 ## Examples of appropriate stories
 

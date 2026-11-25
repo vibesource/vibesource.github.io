@@ -3,7 +3,7 @@ name: "Cloud Friend"
 eyebrow: "ARTIFICIAL INTELLIGENCE"
 summary: "An expressive AI companion built for a young creator to brainstorm, invent stories and imagine new worlds with."
 area: "Artificial intelligence"
-status: "In development"
+status: "Nurturing"
 accent: "lavender"
 order: 5
 href: "https://github.com/vibesource/cloud-friend"

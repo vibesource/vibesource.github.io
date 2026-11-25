@@ -8,7 +8,7 @@ const projects = defineCollection({
     eyebrow: z.string(),
     summary: z.string(),
     area: z.string(),
-    status: z.enum(['Exploring', 'In development', 'Public repository']),
+    status: z.enum(['Exploring', 'In development', 'Nurturing', 'Public repository']),
     accent: z.enum(['cyan', 'lavender', 'amber', 'lime', 'rose']),
     order: z.number().int().positive(),
     href: z.string().url().optional(),

@@ -17,13 +17,16 @@ She loves inventing stories, drawing pictures and building Minecraft worlds. She
 
 Cloud chats, helps brainstorm ideas, co-creates stories and generates cute illustrations. She remembers selected details from earlier conversations, and animated expressions give her personality. The cat sitting on the cloud was my daughter's idea. She refined the character over several iterations, making it something she helped create.
 
-![Cloud chatting about an imaginary kingdom with a generated illustration](https://raw.githubusercontent.com/vibesource/cloud-friend/main/docs/images/cloud-chat.png)
-
-*Chat and image generation, shown with a demonstration conversation.*
-
-![Cloud and the user collaborating on an illustrated story](https://raw.githubusercontent.com/vibesource/cloud-friend/main/docs/images/cloud-story-mode.png)
-
-*Story mode, where Cloud and the user imagine a story together.*
+<div style="display:flex;flex-wrap:wrap;gap:1.25rem;align-items:flex-start;margin:1.5rem 0">
+  <figure style="flex:1 1 240px;min-width:0;margin:0">
+    <img src="https://raw.githubusercontent.com/vibesource/cloud-friend/main/docs/images/cloud-chat.png" alt="Cloud chatting about an imaginary kingdom with a generated illustration" style="display:block;width:100%;height:auto" loading="lazy" />
+    <figcaption style="margin-top:0.5rem;font-size:0.9em">Chat and image generation, shown with a demonstration conversation.</figcaption>
+  </figure>
+  <figure style="flex:1 1 240px;min-width:0;margin:0">
+    <img src="https://raw.githubusercontent.com/vibesource/cloud-friend/main/docs/images/cloud-story-mode.png" alt="Cloud and the user collaborating on an illustrated story" style="display:block;width:100%;height:auto" loading="lazy" />
+    <figcaption style="margin-top:0.5rem;font-size:0.9em">Story mode, where Cloud and the user imagine a story together.</figcaption>
+  </figure>
+</div>
 
 ## A character with expressions
 
